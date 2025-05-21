@@ -8,16 +8,9 @@ You need libowfat (http://www.fefe.de/libowfat/).
 
 Steps to go:
 
-```bash
-cvs -d :pserver:cvs@cvs.fefe.de:/cvs -z9 co libowfat
-cd libowfat
-make
-cd ..
-cvs -d:pserver:anoncvs@cvs.erdgeist.org:/home/cvsroot co opentracker
-cd opentracker
-make
-./opentracker
-```
+clone the repo.
+use "make" command.
+start opentracker by "./opentracker -p PORT"
 
 This tracker is open in a sense that everyone announcing a torrent is welcome to do so and will be informed about anyone else announcing the same torrent. Unless
 `-DWANT_IP_FROM_QUERY_STRING` is enabled (which is meant for debugging purposes only), only source IPs are accepted. The tracker implements a minimal set of
