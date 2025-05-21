@@ -517,7 +517,7 @@ static ssize_t http_handle_announce( const int64 sock, struct ot_workstruct *ws,
 
         write_ptr[len-SUFFIXLEN] = '\0'; // strip .i2p ending
 
-        unsigned char * bdata = unbase64((char*)write_ptr, len-SUFFIXLEN, &blen);
+        unsigned char * bdata = base64_dec((char*)write_ptr, len-SUFFIXLEN, &blen);
         if( !bdata ) HTTPERROR_400_PARAM;
 
         sha256_init( &bctx );
